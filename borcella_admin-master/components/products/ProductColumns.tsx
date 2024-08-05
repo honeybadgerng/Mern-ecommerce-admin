@@ -9,10 +9,7 @@ export const columns: ColumnDef<ProductType>[] = [
     accessorKey: "title",
     header: "Title",
     cell: ({ row }) => (
-      <Link
-        href={`/products/${row.original._id}`}
-        className="hover:text-red-1"
-      >
+      <Link href={`/products/${row.original._id}`} className="hover:text-red-1">
         {row.original.title}
       </Link>
     ),
@@ -24,15 +21,16 @@ export const columns: ColumnDef<ProductType>[] = [
   {
     accessorKey: "collections",
     header: "Collections",
-    cell: ({ row }) => row.original.collections.map((collection) => collection.title).join(", "),
+    cell: ({ row }) =>
+      row.original.collections.map((collection) => collection.title).join(", "),
   },
   {
     accessorKey: "price",
-    header: "Price ($)",
+    header: "Price (₦)",
   },
   {
     accessorKey: "expense",
-    header: "Expense ($)",
+    header: "Expense (₦)",
   },
   {
     id: "actions",
