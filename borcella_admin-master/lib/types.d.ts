@@ -53,6 +53,8 @@ type PostType = {
   tags: [string];
   sizes: [string];
   colors: [string];
+  price: number;
+  expense: number;
   createdAt: Date;
   updatedAt: Date;
 };
